@@ -1,11 +1,16 @@
-import React from 'react';
 import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const News = () => {
+    useEffect(() =>{
+        Aos.init();
+    },[])
     return (
         <div>
-            <h2 className='text-7xl text-center'>Features</h2>
+            <div data-aos="fade-up"><h2 className='text-7xl text-center'>Features</h2></div>
             <Marquee pauseOnHover={true} className='mt-4 md:mt-12'>
             <div className='flex gap-3 cursor-pointer justify-center items-center md:mr-20 mr-6'>
                     <h3 className='text-sm'>sohag360</h3>

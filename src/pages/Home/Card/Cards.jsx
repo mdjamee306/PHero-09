@@ -1,16 +1,24 @@
-import React from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Cards = ({ card }) => {
+
+
     const { id, image, category_name, title, card_bg, title_color, category_bg } = card || {}
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
         <div>
-            <div className='rounded-xl shadow-xl' style={{ background: `${card_bg}` }}>
+            <div  data-aos="zoom-in" className='rounded-xl shadow-xl' style={{ background: `${card_bg}` }}>
                 <div className={`flex flex-col drop-shadow-xl rounded-xl  bg-clip-border shadow-md`}>
                     <div className={`overflow-hidden rounded-xl  bg-clip-border`}>
                         <img
                             src={image}
-                            className="h-[400px] w-full"
+                            className="h-[500px] w-full"
                         />
                     </div>
                     <div className={`px-4 mt-5 `} style={{ color: `${title_color}` }} >

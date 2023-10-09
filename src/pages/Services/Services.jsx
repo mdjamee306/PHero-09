@@ -1,12 +1,18 @@
-import React from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const Services = () => {
+    useEffect(() =>{
+        Aos.init();
+    },[])
     return (
         <div>
             <section className="text-white body-font overflow-hidden">
                 <div className="container bg-slate-300 px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-20">
-                        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-[#132043]">Pricing</h1>
+                        <div data-aos="fade-up"><h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-[#132043]">Pricing</h1></div>
                         <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.</p>
                         <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
                             <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Monthly</button>
@@ -14,7 +20,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap -m-4">
-                        <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
+                        <div data-aos="fade-right" className="p-4 xl:w-1/4 md:w-1/2 w-full">
                             <div className="h-full p-6 rounded-lg border-2 border-black flex flex-col relative overflow-hidden">
                                 <h2 className="text-sm tracking-widest title-font mb-1 font-medium">START</h2>
                                 <h1 className="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">Free</h1>
@@ -47,7 +53,7 @@ const Services = () => {
                                 <p className="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
                             </div>
                         </div>
-                        <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
+                        <div data-aos="fade-up" className="p-4 xl:w-1/4 md:w-1/2 w-full">
                             <div className="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
                                 <span className="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
                                 <h2 className="text-sm tracking-widest title-font mb-1 font-medium">PRO</h2>
@@ -91,7 +97,7 @@ const Services = () => {
                                 <p className="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
                             </div>
                         </div>
-                        <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
+                        <div data-aos="fade-down" className="p-4 xl:w-1/4 md:w-1/2 w-full">
                             <div className="h-full p-6 rounded-lg border-2 border-black flex flex-col relative overflow-hidden">
                                 <h2 className="text-sm tracking-widest title-font mb-1 font-medium">BUSINESS</h2>
                                 <h1 className="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
@@ -141,7 +147,7 @@ const Services = () => {
                                 <p className="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
                             </div>
                         </div>
-                        <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
+                        <div data-aos="fade-left" className="p-4 xl:w-1/4 md:w-1/2 w-full">
                             <div className="h-full p-6 rounded-lg border-2 border-black flex flex-col relative overflow-hidden">
                                 <h2 className="text-sm tracking-widest title-font mb-1 font-medium">SPECIAL</h2>
                                 <h1 className="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">

@@ -1,8 +1,8 @@
-# React + Vite
+Feature One:
+This is a beatiful tech and game related websites.There is interesting features. You can can see the login and register page here.There is also a google login method. If anyone login here he can see alot of things about us.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Feature Two:
+After login you can see banner, card etc. You can click details btn from the card.Read details and there has a buy ticket btn.You can join us in an any event.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Feature Three:
+We add services options and contact us.So that you can connect with us for the future events.In future we will add store.By using store you can purchase a lot of things. Such as games, event ticket, membership and so on. So stay with us.Thank You.

@@ -6,6 +6,9 @@ import Contact from "../pages/Contact/Contact";
 import Details from "../pages/Details/Details";
 import Services from "../pages/Services/Services";
 import Error from "../pages/Error/Error";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import Private from "../pages/PrivateRouts/Private";
 
 const router = createBrowserRouter([
     {
@@ -20,19 +23,27 @@ const router = createBrowserRouter([
             },
             {
                 path: '/store',
-                element: <Store></Store>
+                element: <Private><Store></Store></Private>
             },
             {
                 path: '/services',
-                element: <Services></Services>
+                element: <Private><Services></Services></Private>
             },
             {
                 path: '/contact',
                 element: <Contact></Contact>
             },
             {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
                 path: '/card/:id',
-                element: <Details></Details>,
+                element: <Private><Details></Details></Private>,
                 loader: () => fetch("/onedata.json")
             }
         ]

@@ -1,13 +1,41 @@
+
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../firebase/AuthProvider";
 
 const Navbar = () => {
+    const { userr, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
     const navLink = <>
-        <li><NavLink to={'/'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Home</NavLink></li>
-        <li><NavLink to={'/details'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Details</NavLink></li>
-        <li><NavLink to={'/store'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Store</NavLink></li>
-        <li><NavLink to={'/services'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Services</NavLink></li>
-        <li><NavLink to={'/contact'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Contact us</NavLink></li>
+        <li><NavLink to={'/'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Home</NavLink>
+        </li>
+
+        {userr &&
+            <li><NavLink to={'/details'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Details</NavLink>
+            </li>
+        }
+
+        {userr && <li><NavLink to={'/store'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Store</NavLink>
+        </li>}
+
+        {userr && <li><NavLink to={'/services'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Services</NavLink>
+        </li>
+        }
+        <li><NavLink to={'/contact'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Contact us</NavLink>
+        </li>
+
+        <li><NavLink to={'/register'} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#CCC8AA] underline" : ""}>Register</NavLink>
+        </li>
     </>
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -30,14 +58,26 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">
-                    <label className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img src="https://i.ibb.co/3pLFG1x/undraw-Male-avatar-g98d.png" alt="user profile" />
-                        </div>
-                    </label>
-                    <Link>
-                        <button className="btn">Login</button>
-                    </Link>
+
+                    {
+                        userr ?
+                            <div className="flex justify-center items-center">
+                                <h3>{userr.displayName}</h3>
+                                <label className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={userr.photoURL} alt="user profile" />
+                                    </div>
+                                </label>
+
+                                <Link>
+                                    <button onClick={handleLogOut} className="btn">Logout</button>
+                                </Link>
+                            </div>
+                            :
+                            <Link to={'/login'}>
+                                <button className="btn">Login</button>
+                            </Link>
+                    }
                     <Link to={"services"}>
                         <button className="btn">Buy Tickets</button>
                     </Link>
