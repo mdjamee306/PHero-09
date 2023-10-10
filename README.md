@@ -1,5 +1,5 @@
 Live Website Link: 
-[TechG](https://65252d5a3372f60731d5ee9c--fantastic-kitsune-2619c5.netlify.app/)
+[TechG](https://6525326c209f7014c9343cb7--fantastic-kitsune-2619c5.netlify.app/)
 
 Feature One:
 This is a beatiful tech and game related websites.There is interesting features. You can can see the login and register page here.There is also a google login method. If anyone login here he can see alot of things about us.
