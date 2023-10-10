@@ -105,17 +105,14 @@ nums.forEach((num) => {
 console.log(count);
 ```
 
-- A: 1
-- B: 2
 - C: 3
-- D: 4
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>By using a forEach loop tit go through each number in the nums array. At that time it checks if each number is not equal to 0. If a number is not 0, it is considered truthy, and the count variable is incremented by 1. After examining all the numbers in the array, the final count of truthy values is 3 (as 1, 2, and 3 are truthy), and this value is logged to the console using console.log(count).</i>
 
 </p>
 </details>
