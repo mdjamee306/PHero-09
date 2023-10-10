@@ -11,16 +11,16 @@ greetign = {};
 console.log(greetign);
 ```
 
-- A: `{}`
+
 - B: `ReferenceError: greetign is not defined`
-- C: `undefined`
+
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>actually greeting is not define thats why its ans will be (B)</i>
 
 </p>
 </details>
@@ -36,16 +36,13 @@ sum(1, "2");
 ```
 
 - A: `NaN`
-- B: `TypeError`
-- C: `"12"`
-- D: `3`
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>It will not output anything! 1 is a number and the other one is string.It is not possible to sum of number and string.</i>
 
 </p>
 </details>
@@ -62,16 +59,13 @@ console.log(food);
 ```
 
 - A: `['🍕', '🍫', '🥑', '🍔']`
-- B: `['🍝', '🍫', '🥑', '🍔']`
-- C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
-- D: `ReferenceError`
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i> It will output the first array, which is ["1", "2", "3", "4"]. The info object's property does not affect the food array.</i>
 
 </p>
 </details>
@@ -86,17 +80,14 @@ function sayHi(name) {
 console.log(sayHi());
 ```
 
-- A: `Hi there,`
 - B: `Hi there, undefined`
-- C: `Hi there, null`
-- D: `ReferenceError`
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>The code result is an error when i try to run it because you are calling the sayHi function without passing an argument for the name parameter, and the function expects an argument.</i>
 
 </p>
 </details>
